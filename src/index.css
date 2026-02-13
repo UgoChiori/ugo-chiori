@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import "tailwindcss";
+
+:root {
+    /* background: #fff; */
+    background: #1C1D20;
+
+    color: #fff;
+  
+    font-family: 'Inter', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    background: #1C1D20;
+    overflow-x: hidden;
+
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+    font-size: 16px;
+}
+
+
+
+
+.work-grid-section {
+    padding: 10vh 0;
+    /* background: #000; */
+}
+
+.work-grid-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 20vh;
+    /* background: #000; */
+}
+
+.work-box {
+
+    width: 22vw;
+    height: 50vh;
+    display: flex;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Text at the bottom */
+    padding: 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Darken the image slightly so text stands out */
+.work-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+    z-index: 1;
+}
+
+.work-box h3 {
+    position: relative;
+    z-index: 2;
+    /* Sits above the gradient */
+    color: #fff;
+    margin: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.box-link {
+    position: relative;
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    margin-top: 8px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+
+.work-box:hover .box-link {
+    color: #fff;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+.img-news {
+    background-image: url('/images/hairaffairs.png');
+}
+
+.img-blog {
+    background-image: url('/images/cocktailbar.png');
+}
+
+.img-work {
+    background-image: url('/images/topfitgym.png');
+}
+
+.img-talks {
+    background-image: url('/images/ta3.jpg');
+}
+
+
+.about-full-img {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about-full-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-text-content {
+  padding: 15vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background: transparent;
+}
+
+.about-text-content p {
+  text-align: center;
+  color: #fff;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-wrap: balance; 
+   max-width: 650px; 
+  width: 90%;
+    color: rgba(255, 255, 255, 0.9); 
+ 
+
+
+}
+
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 18vw;
+  }
+
+  .impact-words {
+    font-size: 4rem;
+  }
+
+  .work-box {
+    width: 28vw;
+    height: 45vh;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .fixed-nav {
+    height: 70px;
+    padding: 0 5%;
+  }
+
+  .get-in-touch {
+    padding: 9px 18px;
+    font-size: 12px;
+  }
+
+
+  .hero {
+    height: 90vh;
+  }
+
+  .hero-title {
+    font-size: 20vw;
+  }
+
+
+  .transition-text {
+    padding: 15vh 8vw;
+  }
+
+  .impact-words {
+    font-size: 3.5rem;
+  }
+
+  .sub-text {
+    font-size: 1.05rem;
+  }
+
+
+  .work-grid-container {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 6vw 15vh;
+  }
+
+  .work-box {
+    width: 42vw;
+    height: 45vh;
+  }
+
+  /* ABOUT */
+  .about-text-content {
+    padding: 12vh 0;
+  }
+
+  .about-text-content p {
+    font-size: 1.05rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+ /* @media (max-width: 768px) {
+  .fixed-nav {
+    height: 60px; 
+    padding: 0 5%;
+  }
+
+  .nav-center {
+    letter-spacing: 1px;
+  }
+
+  .hamburger-circle {
+    width: 38px; 
+    height: 38px;
+  }
+
+  .get-in-touch {
+    padding: 8px 16px; 
+    font-size: 11px;
+  }
+} */
+
+
+
+
+
+  .hero {
+    height: 85vh;
+  }
+
+  .hero-title {
+    font-size: 22vw;
+    text-align: center;
+  }
+
+
+  .transition-text {
+    padding: 12vh 6vw;
+  }
+
+  .impact-words {
+    font-size: 2.6rem;
+    line-height: 1.2;
+  }
+
+  .sub-text {
+    font-size: 1rem;
+  }
+
+
+ .work-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 4vw 12vh;
+  }
+
+  .work-box {
+    width: 100%;
+    height: 42vh;
+    padding: 20px;
+  }
+
+
+  .about-full-img {
+    height: 70vh;
+  }
+
+  .about-text-content {
+    padding: 10vh 0;
+  }
+
+  .about-text-content p {
+    width: 92%;
+    font-size: 1rem;
+    line-height: 1.7;
+
+  }
+
+
+  .hero-title {
+    font-size: 24vw;
+  }
+
+  .impact-words {
+    font-size: 2.2rem;
+  }
+}
+   .work-box {
+    height: 38vh;
+    padding: 18px;
+  }
+  @media (max-width: 480px) {
+  
+  /* .get-in-touch {
+    padding: 8px 12px;
+  }
+   */
+
+}
+
