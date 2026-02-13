@@ -66,6 +66,7 @@ html {
 
 /* Darken the image slightly so text stands out */
 .work-box::before {
+
     content: "";
     position: absolute;
     top: 0;

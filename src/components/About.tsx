@@ -90,7 +90,7 @@ const About: React.FC = () => {
           <img
             src="images/ugodaen.png" 
             alt="Ugo Chiori"
-            className="w-full h-auto object-cover brightness-90 contrast-110"
+            className="w-full h-auto object-cover brightness-90 contrast-110 opacity-[0.5]"
           />
         </div>
 
