@@ -108,7 +108,7 @@ const Work: React.FC = () => {
           </div>
           <div className="work-box pos-up img-blog">
             <h3>cafe de l'aube</h3>
-               <a href="https://hairaffairs.vercel.app/"
+               <a href="http://cocktailbar-jade.vercel.app/"
               target="_blank"
                     rel="noopener noreferrer"
                   

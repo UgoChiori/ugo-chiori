@@ -1,11 +1,29 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import axios from "axios";
 
 const ContactPage: React.FC = () => {
+  const [ formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+  const [status, setStatus] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [loading, setLoading] = useState(false);
   const container = useRef(null);
   const buttonRef = useRef(null);
   const formRef = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
+
+
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,7 +45,7 @@ const ContactPage: React.FC = () => {
       });
 
       // Optional: Turn the underline red temporarily
-      gsap.to(".group border-t", { borderColor: "#ef4444", duration: 0.3 });
+      gsap.to("", { borderColor: "#ef4444", duration: 0.3 });
     } else {
       // Success logic here
       console.log("Form Submitted");
@@ -79,6 +97,42 @@ const ContactPage: React.FC = () => {
     };
   }, []);
 
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleSubmit = (e: any) => {
+  e.preventDefault();
+  setLoading(true);
+
+  axios
+    // .post("http://localhost:1000/api/contact", formData)  
+    .post("https://portfoliobackend-8zmz.onrender.com/api/contact", formData)
+    .then((response) => {
+      console.log("✅ Response:", response.data);
+      setStatus("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+      setShowModal(true);
+    })
+    .catch((error) => {
+      console.log("❌ Error:", error);
+      console.error("❌ Error submitting form:", error);
+      setStatus("An error occurred. Please try again later.");
+      setShowModal(true);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+};
+
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+
   return (
     <div
       ref={container}
@@ -92,7 +146,7 @@ const ContactPage: React.FC = () => {
             </h1>
           </div>
 
-          <form className="space-y-8">
+          <form ref={form} onSubmit={handleSubmit} className="space-y-8">
             {[
               { id: "01", label: "What's your name?", placeholder: "Name" },
               {
@@ -130,6 +184,7 @@ const ContactPage: React.FC = () => {
                     </label>
                     <input
                       type="text"
+                      onChange={handleChange}
                       placeholder={field.placeholder}
                       className="w-full bg-transparent border-none outline-none text-lg pb-4 placeholder:text-white/10 focus:placeholder:text-transparent transition-all"
                     />
@@ -181,16 +236,37 @@ const ContactPage: React.FC = () => {
 
           <div className="mt-auto self-center md:self-end pr-0 md:pr-10">
             <button
+            type="submit"
+            disabled={loading}
               ref={buttonRef}
               onClick={handleSend}
               className="w-36 h-36 bg-[#455CE9] rounded-full text-white font-medium text-sm flex items-center justify-center shadow-2xl relative overflow-hidden group"
             >
-              <span className="relative z-10">Send it!</span>
+              <span className="relative z-10">{loading ? "Sending..." : "Send it!"}</span>
               <div className="absolute inset-0 bg-white scale-0 cursor-pointer transition-transform duration-500 rounded-full mix-blend-difference" />
             </button>
           </div>
         </div>
       </div>
+        {showModal && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-gray-800 text-white p-6 rounded-md max-w-sm w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <p className="text-center text-lg">{status}</p>
+            <button
+              className="w-full py-2 bg-gray-900 text-white uppercase font-semibold rounded-md hover:bg-gray-600 transition duration-200 border border-gray-700 mt-4 "
+              onClick={closeModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="max-w-[1440px] mx-auto mt-20 pt-6 border-t border-white/5 flex justify-between text-[9px] uppercase tracking-[0.3em] text-white/20">
         <p>2026 © Edition</p>
