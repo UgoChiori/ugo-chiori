@@ -94,8 +94,8 @@ const Work: React.FC = () => {
       <section className="work-grid-section ">
         <div className="work-grid-container">
           <div className="work-box pos-down img-news">
-            <h3>Hair Affairs</h3>
-             <a href="https://hairaffairs.vercel.app/"
+            <h3>GLALPC</h3>
+             <a href="http://glalpc.com/"
               target="_blank"
                     rel="noopener noreferrer"
                   
@@ -126,8 +126,13 @@ const Work: React.FC = () => {
             </a>
           </div>
           <div className="work-box pos-up img-talks">
-            <h3>work in progress</h3>
+            <h3>ndidia by uyai</h3>
+            <a href="https://ndidiabyuyai.vercel.app/"
+             target="_blank"
+                    rel="noopener noreferrer"
+            >
             <span className="box-link">VIEW &#8599;</span>
+            </a>
           </div>
         </div>
       </section>
