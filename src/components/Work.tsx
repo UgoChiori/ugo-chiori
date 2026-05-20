@@ -95,7 +95,7 @@ const Work: React.FC = () => {
         <div className="work-grid-container">
           <div className="work-box pos-down img-news">
             <h3>GLALPC</h3>
-             <a href="http://glalpc.com/"
+             <a href="https://glalpc.com/"
               target="_blank"
                     rel="noopener noreferrer"
                   
