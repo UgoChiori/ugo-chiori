@@ -8,8 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SOCIAL_LINKS = [
-  { label: "Instagram", href: "https://www.instagram.com/cofffeeee_lover/" },
-  { label: "Threads", href: "https://www.threads.com/@cofffeeee_lover" },
+  // { label: "Instagram", href: "https://www.instagram.com/cofffeeee_lover/" },
+  // { label: "Threads", href: "https://www.threads.com/@cofffeeee_lover" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/ugo-chiori-b53439309/" },
 ];
 
