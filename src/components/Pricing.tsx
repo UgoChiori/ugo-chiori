@@ -126,8 +126,8 @@ export default function Pricing() {
           >
             {/* BADGE */}
             {plan.popular && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-black text-xs px-3 py-1 rounded-full">
-                Most Popular
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2  text-black text-xs px-3 py-1 rounded-full">
+                {/* Most Popular */}
               </div>
             )}
 
