@@ -32,6 +32,7 @@ const Navbar: React.FC = () => {
       <nav className="fixed top-0 left-0 w-full h-20 z-[1000] mix-blend-difference font-sans">
         <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-6 md:px-16">
           <button
+              title="Menu"
             onClick={() => setOpen(!open)}
             className="w-10 h-10 md:w-11 md:h-11 bg-white/10 rounded-full flex flex-col justify-center items-center gap-1 border border-white/20 transition-colors cursor-pointer"
           >
@@ -75,6 +76,9 @@ const Navbar: React.FC = () => {
         </Link>
         <Link to="/about" onClick={() => setOpen(false)}>
           About
+        </Link>
+        <Link to="/prices" onClick={() => setOpen(false)}>
+        Pricing
         </Link>
         <Link to="/contact" onClick={() => setOpen(false)}>
           Contact
