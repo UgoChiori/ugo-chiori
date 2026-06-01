@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef} from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero: React.FC = () => {
+  // const [lang, setLang] = useState<'en' | 'fr'>('en');
   const container = useRef<HTMLDivElement>(null);
   const firstText = useRef<HTMLHeadingElement>(null);
   const secondText = useRef<HTMLHeadingElement>(null);

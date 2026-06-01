@@ -77,7 +77,7 @@ export default function Pricing() {
           Simple pricing. Clear packages.
         </h1>
 
-        <p className="text-gray-400 mt-4 text-lg">
+        <p className="text-gray-100 mt-4 text-lg">
           Choose a package that fits your needs. Each one is built to be fast,
           responsive, and scalable. And if you're unsure, we’ll figure it out together.
         </p>
@@ -174,7 +174,7 @@ export default function Pricing() {
       <div className="text-center mt-20 max-w-2xl mx-auto">
         <h2 className="text-2xl font-semibold">Custom / Enterprise</h2>
 
-        <p className="text-gray-400 mt-2">
+        <p className="text-gray-100 mt-2">
           For complex systems, SaaS products, dashboards, and long-term builds.
           Pricing is defined after a discovery call.
         </p>
@@ -185,6 +185,9 @@ export default function Pricing() {
         >
           Book Discovery Call
         </button>
+      </div>
+         <div className="text-center mt-20 text-gray-100 text-sm">
+        * Prices do not include domain or hosting costs. Revisions are defined as changes to the design or content after the initial delivery. For custom requests, please contact us directly.
       </div>
     </div>
   );
