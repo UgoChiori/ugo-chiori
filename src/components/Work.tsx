@@ -58,8 +58,7 @@ const Work: React.FC = () => {
         duration: 1.5,
         ease: "power2.out",
       },
-    )
-    .to(path, {
+    ).to(path, {
       scaleY: 1.05,
       transformOrigin: "center",
       duration: 2,
@@ -95,43 +94,43 @@ const Work: React.FC = () => {
         <div className="work-grid-container">
           <div className="work-box pos-down img-news">
             <h3>GLALPC</h3>
-             <a href="https://glalpc.com/"
+            <a
+              href="https://glalpc.com/"
               target="_blank"
-                    rel="noopener noreferrer"
-                  
+              rel="noopener noreferrer"
             >
-            
               {" "}
-              <span className="box-link">VIEW  &#8599;</span>
+              <span className="box-link">VIEW &#8599;</span>
             </a>
-          
           </div>
           <div className="work-box pos-up img-blog">
             <h3>cafe de l'aube</h3>
-               <a href="http://cocktailbar-jade.vercel.app/"
+            <a
+              href="http://cocktailbar-jade.vercel.app/"
               target="_blank"
-                    rel="noopener noreferrer"
-                  
+              rel="noopener noreferrer"
             >
-            <span className="box-link">VIEW &#8599;</span>
+              <span className="box-link">VIEW &#8599;</span>
             </a>
           </div>
           <div className="work-box pos-down img-work">
-            <h3>topfit gym</h3>
-            <a href="https://topfitgym.vercel.app/"
-             target="_blank"
-                    rel="noopener noreferrer"
+            <h3>keu engineering</h3>
+            <a
+              href="http://keuengineering.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-            <span className="box-link">VIEW &#8599;</span>
+              <span className="box-link">VIEW &#8599;</span>
             </a>
           </div>
           <div className="work-box pos-up img-talks">
             <h3>ndidia by uyai</h3>
-            <a href="https://ndidiabyuyai.vercel.app/"
-             target="_blank"
-                    rel="noopener noreferrer"
+            <a
+              href="https://ndidiabyuyai.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-            <span className="box-link">VIEW &#8599;</span>
+              <span className="box-link">VIEW &#8599;</span>
             </a>
           </div>
         </div>

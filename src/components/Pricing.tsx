@@ -187,7 +187,7 @@ export default function Pricing() {
         </button>
       </div>
          <div className="text-center mt-20 text-gray-100 text-sm">
-        * Prices do not include domain or hosting costs. Revisions are defined as changes to the design or content after the initial delivery. For custom requests, please contact us directly.
+        * Prices do not include design, domain or hosting costs. Revisions are defined as changes to the design or content after the initial delivery. For custom requests, please contact us directly.
       </div>
     </div>
   );
